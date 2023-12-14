@@ -28,4 +28,43 @@ Feature: Is it Friday yet?
 .Capture d'écran du test réussie
 image::/images/test_success.png[width=80%]
 
-== TP2...
+== TP2
+.Exemple de code
+[source,java]
+---
+package hellocucumber;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Order {
+
+    private String owner;
+    private String target;
+    private final List<String> cocktails;
+    private String message;
+    public Order() {
+        this.cocktails = new ArrayList<>();
+    }
+
+    public void declareOwner(String romeo) {
+        this.owner = romeo;
+    }
+
+    public void declareTarget(String juliette) {
+        this.target = juliette;
+    }
+
+    public List<String> getCocktails() {
+        return cocktails;
+    }
+
+    public String addMessage(String message) {
+        this.message = "From " + owner + " to " + target + ": " + message;
+        return this.message;
+    }
+}
+
+
+.Capture d'écran du test réussie
+image::/images/test_success_TP2.png[width=80%]
